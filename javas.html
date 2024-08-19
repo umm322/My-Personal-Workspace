@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Foto dengan Detail</title>
+    <link rel="stylesheet" href="javas.css">
+</head>
+
+<header>
+    <h1>Kami dari kelompok DARIAN yang terdiri dari Daniel Rifqi Ananta dan berikut merupakan tugas kelompok kami</h1>
+</header>
+
+<body>
+    <div class="gallery-container">
+
+        <div class="photo-container">
+            <img src="/WhatsApp Image 2024-08-19 at 10.36.46_dfe91c7f.jpg" alt="Gunung" class="photo">
+            <button class="detail-button" onclick="showDetails('Putu Anantadana Sandhi 32 XI RPL 2')">Detail</button>
+        </div>
+        
+        <div class="photo-container">
+            <img src="/WhatsApp Image 2024-08-19 at 10.36.47_bbef5899.jpg" alt="Pantai" class="photo">
+            <button class="detail-button" onclick="showDetails('Zacharia Rifqi Deanova 35 XI RPL 2')">Detail</button>
+        </div>
+
+        <div class="photo-container">
+            <img src="/WhatsApp Image 2024-08-19 at 10.36.47_994bdaa4.jpg" alt="Hutan" class="photo">
+            <button class="detail-button" onclick="showDetails('Made Daniel Ari Prasetya 22 XI RPL 2')">Detail</button>
+        </div>
+    </div>
+
+
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="detailText"></p>
+        </div>
+    </div>
+
+    <script>
+        function showDetails(detail) {
+
+            document.getElementById("detailText").textContent = detail;
+            document.getElementById("detailModal").style.display = "flex";
+        }
+
+        function closeModal() {
+
+            document.getElementById("detailModal").style.display = "none";
+        }
+
+
+        window.onclick = function(event) {
+            var modal = document.getElementById("detailModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
